@@ -7,25 +7,28 @@ def bondify(name):
   return c_name[c_name.find(" ") + 1:] + ", " + c_name
 
 def piglatin(word):
-  constonant = False
-  for vowel in ["a", "e", "i", "o", "u"]:
-    if word[0].lower() != vowel:
-      constonant = True
-    else:
-      break
-
   new_word = word
-  if constonant:
-    new_word = word[1:] + word[0] + "ay"
-    for letter in word:
-      if letter.isupper():
-        new_word = new_word.capitalize()
-        break
-  else:
+  allcaps = False
+  for letter in word:
+    if letter.isupper():
+      allcaps = True
+    else:
+      allcaps = False
+      break
+            
+  for vowel in ["a", "e", "i", "o", "u"]:
+    if word[0].lower() == vowel:
+      new_word = word[1:] + word[0] + "ay"
+  if new_word == word:
     new_word = word + "yay"
-    
+
+  if allcaps:
+    new_word = new_word.upper()
+  elif word[0].isupper():
+    new_word = new_word.capitalize()
+
   return new_word
 
 print(initialize("john doe"))
 print(bondify("john doe"))
-print(piglatin("fart"))
+print(piglatin("aLAbAmA"))
