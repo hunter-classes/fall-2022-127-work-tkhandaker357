@@ -2,7 +2,7 @@ import turtle
 
 window = turtle.Screen()
 
-def drawShape(size, sides, upright = True, width = 1, colour = "black", startingx = 0, startingy = 0):
+def ngon(size, sides, upright = True, startingx = 0, startingy = 0, width = 1, colour = "black"):
   shape = turtle.Turtle()
   shape.color(colour)
   shape.width(width)
@@ -18,8 +18,13 @@ def drawShape(size, sides, upright = True, width = 1, colour = "black", starting
     else:
       shape.right(360 / sides)
 
-drawShape(30, 6, False, 4, "blue", 50, 50)
-drawShape(50, 3)
+def hexagon():
+  ngon(30, 6, False, 50, 50, 4, "blue")
+
+hexagon()
+ngon(50, 3, False, 20, 30, 8, "red")
+ngon(50, 8, False)
+
 
 window.exitonclick()
 window.mainloop()
