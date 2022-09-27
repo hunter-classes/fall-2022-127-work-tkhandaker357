@@ -1,3 +1,7 @@
+from hashlib import new
+from string import punctuation, whitespace
+
+
 def initialize(name):
   c_name = name.title()
   return c_name[0] + "." + c_name[c_name.find(" "):]
@@ -15,12 +19,20 @@ def piglatin(word):
     else:
       allcaps = False
       break
-            
-  for vowel in ["a", "e", "i", "o", "u"]:
+
+  punctuation_mark = ''
+  if word[len(word) - 1] in ['.', '!', '?']:
+    punctuation_mark = word[len(word) - 1]
+    word = word.replace(punctuation_mark, '')
+    new_word = word
+
+  for vowel in ['a', 'e', 'i', 'o', 'u']:
     if word[0].lower() == vowel:
       new_word = word[1:] + word[0] + "ay"
   if new_word == word:
-    new_word = word + "yay"
+    new_word += "yay"
+
+  new_word += punctuation_mark
 
   if allcaps:
     new_word = new_word.upper()
@@ -31,4 +43,4 @@ def piglatin(word):
 
 print(initialize("john doe"))
 print(bondify("john doe"))
-print(piglatin("aLAbAmA"))
+print(piglatin("jo."))
