@@ -1,7 +1,6 @@
 from hashlib import new
 from string import punctuation, whitespace
 
-
 def initialize(name):
   c_name = name.title()
   return c_name[0] + "." + c_name[c_name.find(" "):]

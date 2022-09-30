@@ -1,5 +1,5 @@
-def fizzbuzz():
-    for number in range(1000):
+def fizzbuzz(n):
+    for number in range(int(n)):
         if number % 3 == 0 and number % 5 == 0:
             print("fizzbuzz")
         if number % 3 == 0:
@@ -9,4 +9,6 @@ def fizzbuzz():
         else:
             print(number)
 
-fizzbuzz()
+print("Input a number to fizzbuzz: ")
+number = input()
+fizzbuzz(number)
