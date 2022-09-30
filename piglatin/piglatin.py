@@ -21,13 +21,13 @@ def piglatin(word):
       break
 
   punctuation_mark = ''
-  if word[len(word) - 1] in ['.', '!', '?']:
-    punctuation_mark = word[len(word) - 1]
+  if word[-1] in ['.', '!', '?']:
+    punctuation_mark = word[-1]
     word = word.replace(punctuation_mark, '')
     new_word = word
 
-  for vowel in ['a', 'e', 'i', 'o', 'u']:
-    if word[0].lower() == vowel:
+  for letter in word:
+    if letter in ['a', 'e', 'i', 'o', 'u']:
       new_word = word[1:] + word[0] + "ay"
   if new_word == word:
     new_word += "yay"
@@ -40,7 +40,3 @@ def piglatin(word):
     new_word = new_word.capitalize()
 
   return new_word
-
-print(initialize("john doe"))
-print(bondify("john doe"))
-print(piglatin("jo."))
