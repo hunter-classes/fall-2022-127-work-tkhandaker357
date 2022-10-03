@@ -1,6 +1,3 @@
-from hashlib import new
-from string import punctuation, whitespace
-
 def initialize(name):
   c_name = name.title()
   return c_name[0] + "." + c_name[c_name.find(" "):]
@@ -20,7 +17,7 @@ def piglatin(word):
       break
 
   punctuation_mark = ''
-  if word[-1] in ['.', '!', '?']:
+  if word[-1] in ['.', '!', '?', ',', ':', ';']:
     punctuation_mark = word[-1]
     word = word.replace(punctuation_mark, '')
     new_word = word
