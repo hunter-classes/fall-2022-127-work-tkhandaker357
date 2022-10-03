@@ -8,4 +8,4 @@ def piglatin_sentence(sentence):
         index += 1
     return ' '.join(words)
 
-print(piglatin_sentence("I drove a honda civic over 15 kids yesterday. 36 missing, 14 found."))   
+print(piglatin_sentence("poop poopie stinky fart fart poop poop"))   
