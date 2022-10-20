@@ -1,6 +1,3 @@
-from cgi import test
-
-
 def averageOf(list):
     sum = 0
     for number in list:

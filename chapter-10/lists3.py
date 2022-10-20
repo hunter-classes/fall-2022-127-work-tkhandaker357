@@ -1,5 +1,3 @@
-from symbol import testlist
-
 def maxOf(list):
     list.sort()
     return list[-1]

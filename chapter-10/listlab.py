@@ -1,5 +1,3 @@
-from cgi import test
-
 def smallestNumber(list):
     smallestNum = list[0]
     for number in list:
