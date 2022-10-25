@@ -3,7 +3,7 @@ def findLargest(list):
     return list[-1]
 
 
-def freq(list, value):
+def frequency(list, value):
     frequencyOfVal = 0
     for item in list:
         if value == item:
@@ -11,6 +11,7 @@ def freq(list, value):
     
     return frequencyOfVal
 
+
 testList = [5, 4, 3, 4, 2, 4, 10, 9, 234, 4, 9884]
 print("Largest in List:", findLargest(testList))
-print("Frequency of 4 in List:", freq(testList, 4))
+print("Frequency of 4 in List:", frequency(testList, 4))
