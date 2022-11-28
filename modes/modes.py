@@ -4,14 +4,22 @@ def findLargest(list):
 
 
 def frequency(list, value):
-    frequencyOfVal = 0
-    for item in list:
-        if value == item:
-            frequencyOfVal += 1
+    return len([item for item in list if item == value])
+
+
+def mode(list):
+    frequencies = []
+    for number in list:
+        frequencies.append([item for item in list if item == number])
+
+    modeIndex = 0
+    for index in range(len(list)):
+        if frequency(frequencies, list[index]) > modeIndex:
+            modeIndex = index
     
-    return frequencyOfVal
+    return frequencies[modeIndex][0]
 
-
-testList = [5, 4, 3, 4, 2, 4, 10, 9, 234, 4, 9884]
+testList = [5, 4, 3, 4, 2, 4, 10, 9, 2, 2, 2, 2, 234, 4, 9884]
 print("Largest in List:", findLargest(testList))
 print("Frequency of 4 in List:", frequency(testList, 4))
+print("Mode of list:", mode(testList))
