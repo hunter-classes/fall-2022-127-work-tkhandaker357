@@ -90,7 +90,7 @@ machine:contraption
 driving:sailing
 travel:sailing
 travelling:sailing
-damn:Arrrr;
+damn:Arrrr
 ass:dungbie
 cheat:hornswaggle
 cheated:hornswaggled
