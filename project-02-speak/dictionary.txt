@@ -25,9 +25,9 @@ the:th'
 oof:o'
 don':dern't
 don't:dern't
-never:ne'er BEGIN(INW);
+never:ne'er
 ever:e'er
-over:o'er BEGIN(INW);
+over:o'er
 yes:aye
 yeah:aye
 yea:aye
@@ -42,8 +42,7 @@ wasn't:weren't
 for:fer 
 between:betwixt
 around:aroun'
-to:t' 
-It's:'Tis
+to:t'
 it's:'tis
 woman:wench
 wife:lady
@@ -91,7 +90,7 @@ machine:contraption
 driving:sailing
 travel:sailing
 travelling:sailing
-damn:Arrrr;
+damn:Arrrr
 ass:dungbie
 cheat:hornswaggle
 cheated:hornswaggled
