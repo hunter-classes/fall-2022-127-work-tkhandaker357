@@ -2,8 +2,8 @@
 # put story to be translated in input.txt, and dictionary file in dictionary.txt
 # functions handle period punctuation and capitalisation
 
-file = open('dictionary.txt')
-file2 = open('input.txt')
+file = open('./dictionary.txt')
+file2 = open('./input.txt')
 
 wordBank : str = file.read()
 stringToTranslate : str = ' ' + file2.read().lower()
