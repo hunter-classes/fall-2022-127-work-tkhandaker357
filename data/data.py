@@ -8,14 +8,10 @@ data = pd.read_csv("./classics.csv")
 daysOfRelease = data.loc[:, "bibliography.publication.day"]
 sortedPubDays : list = daysOfRelease.sort_values()
 
-# is inclusive
-def specificRange(startingNum : int, endingNum : int, step : int = 1) -> list:
-    return range(startingNum, endingNum + 1, step)
-
 numOfBooksPerDay : list = []
-days : list = specificRange(1, 31)
+days : list = range(1, 32)
 
-for day in specificRange(1, 31):
+for day in range(1, 32):
     numOfBooks : int = 0
     for [bookNum, releaseDay] in enumerate(sortedPubDays):
         if releaseDay == day:
